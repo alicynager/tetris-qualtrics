@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <title>Tetris Game</title>
 
-  <!-- Blockrain stylesheet -->
-  <link rel="stylesheet" href="src/blockrain.css">
+  <!-- Blockrain stylesheet from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Aerolab/blockrain.js/dist/blockrain.css">
 
   <style>
     html, body {
@@ -24,23 +24,21 @@
     }
   </style>
 </head>
-
 <body>
+  <!-- Tetris container -->
   <div class="game"></div>
 
-  <!-- Local jQuery -->
-  <script src="assets/js/jquery-1.11.1.min.js"></script>
+  <!-- jQuery (CDN) -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
-  <!-- Blockrain plugin + dependencies -->
-  <script src="src/blockrain.jquery.libs.js"></script>
-  <script src="src/blockrain.jquery.src.js"></script>
-  <script src="src/blockrain.jquery.themes.js"></script>
+  <!-- Blockrain plugin from CDN -->
+  <script src="https://cdn.jsdelivr.net/gh/Aerolab/blockrain.js/dist/blockrain.jquery.js"></script>
 
   <script>
     $(function () {
       $('.game').blockrain({
-        theme: 'modern',      // your selected theme
-        autoplay: false,      // participants play manually
+        theme: 'modern',      // your chosen theme
+        autoplay: false,      // participants play
         difficulty: 'normal',
         speed: 20,
         showFieldOnStart: true
