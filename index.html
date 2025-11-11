@@ -14,8 +14,26 @@
       height: 100%;
       background: #000;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    p.instructions {
+      margin: 0 0 20px 0;
+      max-width: 400px;
+      font-size: 0.95em;
+      line-height: 1.4em;
+      color: #ccc;
     }
 
     .game {
@@ -25,7 +43,14 @@
   </style>
 </head>
 <body>
-  <!-- Tetris container -->
+
+  <h2>Tetris Game</h2>
+  <p class="instructions">
+    Use the arrow keys to move and rotate the falling blocks.  
+    Try to complete full horizontal lines to score points.  
+    Play for about 3 minutes, then return to the next page of the survey.
+  </p>
+
   <div class="game"></div>
 
   <!-- jQuery (CDN) -->
@@ -38,7 +63,7 @@
     $(function () {
       $('.game').blockrain({
         theme: 'modern',      // your chosen theme
-        autoplay: false,      // participants play
+        autoplay: false,      // participants play manually
         difficulty: 'normal',
         speed: 20,
         showFieldOnStart: true
