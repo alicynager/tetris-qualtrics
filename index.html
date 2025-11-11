@@ -7,10 +7,6 @@
   <!-- Blockrain stylesheet -->
   <link rel="stylesheet" href="src/blockrain.css">
 
-  <!-- jQuery and Blockrain -->
-  <script src="src/blockrain.jquery.libs.js"></script>
-  <script src="src/blockrain.jquery.src.js"></script>
-
   <style>
     html, body {
       margin: 0;
@@ -21,23 +17,35 @@
       align-items: center;
       justify-content: center;
     }
+
     .game {
       width: 300px;
       height: 600px;
     }
   </style>
 </head>
-
 <body>
+
   <div class="game"></div>
 
+  <!-- jQuery (from CDN is easiest) -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <!-- Blockrain plugin + themes -->
+  <!-- These paths assume your repo has js/blockrain.jquery.min.js and src/blockrain.jquery.themes.js -->
+  <script src="js/blockrain.jquery.min.js"></script>
+  <script src="src/blockrain.jquery.themes.js"></script>
+
   <script>
-    $('.game').blockrain({
-      theme: 'modern',      // your preference
-      autoplay: false,      // participants play manually
-      difficulty: 'normal',
-      speed: 20,
-      showFieldOnStart: true
+    // Wait until DOM is ready, then start the game
+    $(function () {
+      $('.game').blockrain({
+        theme: 'modern',      // your chosen theme
+        autoplay: false,      // participants play
+        difficulty: 'normal',
+        speed: 20,
+        showFieldOnStart: true
+      });
     });
   </script>
 </body>
